@@ -1,0 +1,179 @@
+<!DOCTYPE HTML>
+<!--[if IE 6]>
+<html id="ie6" lang="en-US" class="ie ie6 lt-ie9">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" lang="en-US" class="ie ie7 lt-ie9">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="en-US" class="ie ie8 lt-ie9">
+<![endif]-->
+<!--[if gte IE 9]>
+<html lang="en-US" class="ie ie9">
+<![endif]-->
+<!--[if !(IE)]><!-->
+<html lang="en-US" class="">
+<!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<title>Introduction to Functional Programming</title>
+	<link rel="stylesheet" href="assets/css/reset.css">
+	<link rel="stylesheet" href="css/flowtime.css">
+	<link rel="stylesheet" href="css/themes/default.css">
+	<link rel="stylesheet" href="assets/css/prism.css">
+	<style>
+		blockquote {
+			line-height: 1em;
+		}
+
+		.flowtime img {
+			max-width:95%;
+			margin: 0 auto;
+		}
+	</style>
+</head>
+<body class="">
+	<div class="flowtime">
+		<div class="ft-section" data-id="section-1">
+			<div id="/section-1/page-1" class="ft-page" data-id="page-1" data-title="Introduction to Functional Programming">
+				<div class="stack-center">
+					<div class="stacked-center">						
+						<h1>Introduction to Functional Programming</h1>	
+						<image src="img/nph-hi.gif"></image>					
+					</div>
+				</div>
+			</div>
+			<div id="/section-1/page-2" class="ft-page" data-id="2">
+				<h1>About me</h1>
+				<p>Been with Paylocity since 2012</p>
+				<p>Member of the Mobile Team</p>
+				<p>
+					Two truths and a lie
+					<ul>
+						<li>Automated my job once and didn't tell anyone</li>
+						<li>Named one of my kids after a Game of Thrones character</li>
+						<li>Once told the CTO of a company I worked for he had no clue what he was doing</li>
+					</ul>
+				</p>
+			</div>
+			<div id="/section-1/page-2" class="ft-page" data-id="page-2">
+				<h1>Functional Programming</h1>
+				<ul>
+					<li>What is it?</li>
+					<li>Why is it useful?</li>
+				</ul>				
+			</div>
+		</div>
+		<div class="ft-section" data-id="section-2">
+			<div id="/section-2/page-1" class="ft-page" data-id="page-1">
+				<h1>What is functional programming?</h1>
+				<p>Academically
+					<blockquote>A style of building the structure and elements of computer programs—that treats computation as the evaluation of mathematical functions and avoids changing-state and mutable data.</blockquote>
+				</p>
+				<p>For the rest of us that just want to get work done
+					<blockquote>
+						Writing pure functions, removing hidden inputs and outputs as far as we can, so that as much of our code as possible just describes a relationship between inputs and outputs.
+					</blockquote>					
+				</p>				
+			</div>			
+		</div>
+		<div class="ft-section" data-id="section-3">
+			<div id="/section-3/page-1" class="ft-page" data-id="page-1">
+				<h1>Why is it useful?</h1>
+				<blockquote>
+					The problem with object-oriented languages is they’ve got all this implicit environment that they carry around with them. You wanted a banana but what you got was a gorilla holding the banana and the entire jungle. - Joe Armstrong (creator of Erlang)
+				</blockquote>	
+				<image src="img/gorrila.gif"  style="text-align:center"/>			
+			</div>
+		</div>
+		<div class="ft-section" data-id="section-4">
+			<div id="#/section-4/page-1" class="ft-page" data-id="page-1">
+				<h1>Surfacing side effects</h1>
+				<blockquote>
+					Side-effects are the complexity iceberg. You look at the function signature, and the name, and think you've got a sense of what you're looking at. But hidden beneath the surface of the function signature could be absolutely anything. Any hidden requirement, any hidden change. Without looking at the implementation, you've no way of knowing what's really involved. Beneath the surface of the API is a potentially vast block of extra complexity. To grasp it, you'll only have three options: dive down into the function definition, bring the complexity to the surface, or ignore it and hope for the best. And in the end, ignoring it is usually a titanic mistake. - Kris Jenkins
+				</blockquote>		
+				<image src="img/iceberg.gif" />		
+			</div>
+			<div id="/section-4/page-2" class="ft-page" data-id="page-2">
+				<h1>Dealing with side effects</h1>							
+				<p>Control the side effects by making them explicit.</p>	
+				<p>Isolate them whenever possible.</p>			
+			</div>
+			<div id="/section-4/page-3" class="ft-page" data-id="page-3">
+				<h1>That's cool, but what is a side effect?</h1>
+				<p>Something that happens in your function that's not apparent by the method signature.</p>
+				<p>As much as possible we want to avoid the need to dig into a function to understand it.</p>			
+			</div>			
+		</div>
+		<div class="ft-section" data-id="section-5">
+			<div class="ft-page" data-id="page-1" id="#/section-5/page-1">
+				<h1>Pure functions</h1>
+				<blockquote>Functional programming glossaries contain a large number of large words, but at its core, the essence of FP is really very simple; programs are built mostly with a handful of very small, very reusable, very predictable pure functions. - Eric Elliott</blockquote>
+				<image src="img/nph-target.gif" />			
+			</div>
+			<div id="/section-5/page-2" class="ft-page" data-id="page-2">
+				<h1>What makes a function pure?</h1>
+				<p>The outside world cannot effect it</p>
+				<p>Given the same inputs you always get the same output</p>
+				<p>It's impractical to think that all functions can be pure functions but when possible make your functions pure.</p>
+				<p>Referential transparency</p>								
+			</div>
+			<div class="ft-page" data-id="page-3" id="/section-5/page-3">
+				<h1>Referential what?</h1>
+				<p>The ability to replace the result of the function without changing the way the program behaves.</p>
+			</div>
+		</div>	
+		<div class="ft-section" data-id="section-6">
+			<div class="ft-page" data-id="page-1" id="/section-6/page-1">
+				<h1>In closing</h1>
+				<p>Be aware of the side effects in the code your write</p>
+				<p>Try not to mutate state, return a new state instead</p>
+				<p>When you can, make your functions pure</p>
+				<image src="img/nph-bye.gif" />
+			</div>
+		</div>	
+	</div>
+
+	<script src="js/brav1toolbox.js"></script>
+	<script src="js/flowtime.js"></script>
+	<!-- <script src="js/flowtime.min.js"></script> -->
+	<script src="assets/js/prism.js"></script>
+
+	<script type="text/javascript">
+		
+		// Configuration API test
+		Flowtime.showProgress(true);
+		// Flowtime.fragmentsOnSide(true);
+		// Flowtime.fragmentsOnBack(true);
+		// Flowtime.useHistory(false);
+		// Flowtime.slideInPx(true);
+		// Flowtime.sectionsSlideToTop(true);
+		// Flowtime.backFromPageToTop(true);
+		// Flowtime.gridNavigation(false);
+		// Flowtime.useOverviewVariant(true);
+		Flowtime.parallaxInPx(true);
+		//
+		// event management
+		// Flowtime.addEventListener("flowtimenavigation", onNavigation, false);
+		//Flowtime.onNavigation(onNavigation);
+		function onNavigation(e)
+		{			
+			// console.log(cacheTitle + ' > ' + document.title.replace("Flowtime.js | ", ""));			
+			//console.log('section', e.section, 'sectionIndex', e.sectionIndex);
+			//console.log('page', e.page, 'pageIndex', e.pageIndex);
+			//console.log('pastSectionIndex', e.pastSectionIndex, 'pastPageIndex', e.pastPageIndex);
+			//console.log('prevSection', e.prevSection);
+			//console.log('nextSection', e.nextSection);
+			//console.log('prevPage', e.prevPage);
+			//console.log('nextPage', e.nextPage);
+			//console.log('fragment', e.fragment, + 'fragmentIndex', e.fragmentIndex);
+			//console.log("isOverview", e.isOverview);
+			//console.log('progress:', e.progress, 'total:', e.total);
+			//var value = Math.round(e.progress * 100 / e.total);
+			//console.log('Completion: ' + value + '%');
+		}
+		// starts the application with configuration options
+		Flowtime.start();
+	</script>
+</body>
+</html>
